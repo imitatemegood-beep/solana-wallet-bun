@@ -1,0 +1,19 @@
+version: 1
+environment:
+  name: solana-wallet-bun
+  internet_access: true
+  domain_allowlist:
+    preset: common-dependencies
+    additional:
+      - api.mainnet-beta.solana.com
+      - public-api.birdeye.so
+      - quote-api.jup.ag
+      - price.jup.ag
+      - token.jup.ag
+      - api.dexscreener.com
+  http_methods: all
+  setup:
+    type: bash
+    script: |
+      chmod +x setup.sh
+      ./setup.sh
